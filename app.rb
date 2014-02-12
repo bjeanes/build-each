@@ -6,7 +6,7 @@ require_relative 'jobs'
 class BuildEach < Sinatra::Base
   configure do
     Que.mode = :async
-    Que.worker_count = 1
+    Que.worker_count = ENV.fetch('WORKER_COUNT', "1").to_i
     Que.wake_interval = 2 # seconds
   end
 
