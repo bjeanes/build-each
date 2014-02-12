@@ -8,6 +8,12 @@ individually, instead of in batch so that it reacts to each commit instead of
 just to the effective `HEAD`. For example, I built this to force Travis to run
 the tests for every pushed commit, instead of just for the tip of the branch.
 
+## Using
+
+Change the URL of your push notification (or the **Domain** field in Travis
+service) in GitHub from `https://my-upstream-url.com/foo/bar` to
+`http://build-each.herokuapp.com/build?url=https%3A%2F%2Fmy-upstream-url.com%2Ffoo%2Fbar`.
+
 ## License
 
 The MIT License (MIT)
